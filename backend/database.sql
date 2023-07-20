@@ -20,3 +20,29 @@ CREATE TABLE
 INSERT INTO users (email, password) VALUES
 ("toto@toto.com", "toto"),
 ("tata@tata.com", "tata");
+
+
+CREATE TABLE
+    slides (
+        `id` INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+        `title` VARCHAR(80),
+        `src` VARCHAR(80),
+        `alt` VARCHAR(80),
+        `link` VARCHAR(150),
+        `order` VARCHAR(80)
+    ) ENGINE = InnoDB;
+
+INSERT INTO slides (`title`, `src`, `alt`, `link`, `order`) VALUES
+(
+"Projet Fil Rouge",
+"/src/assets/Battle_fight.png",
+"jeu de combat",
+"https://github.com/AnthonyLASTERNAS/jeu_de_combat",
+"one"
+),
+(
+    "Mon Git Hub", 
+    "/src/assets/Github_logo.jpg", 
+    "Git Hub", 
+    "https://github.com/AnthonyLASTERNAS", 
+    "two");
