@@ -9,10 +9,10 @@ INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
 CREATE TABLE
     users (
         id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-        email VARCHAR(255) NOT NULL UNIQUE KEY,
+        email VARCHAR(255) NOT NULL UNIQUE,
         password VARCHAR(255) NOT NULL,
         firstname VARCHAR(255),
         lastname VARCHAR(255),
-        role INT(1) NOT NULL DEFAULT (0),
-        created DATETIME NOT NULL DEFAULT NOW()
-    ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+        role INT NOT NULL DEFAULT (0),
+        created_at DATETIME NOT NULL DEFAULT NOW()
+    ) ENGINE = InnoDB;
