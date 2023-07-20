@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Logo from "../assets/Github_logo.jpg";
 import Game from "../assets/Battle_fight.png";
 import Linkedin from "../assets/Linkedin.png";
@@ -8,34 +10,36 @@ import Hackathon from "../assets/Hackathon.jpg";
 import Close from "../assets/close.jpg";
 import YouTube from "../assets/Youtube.png";
 import MyBadges from "../assets/mes_badges.png";
+import Slide from "../components/Slide";
 
 export default function Select() {
+  const [slides, setSlides] = useState();
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5555/slides`)
+      .then((res) => {
+        setSlides(res.data);
+      })
+      .catch((err) => console.error(err));
+  }, []);
+
   return (
     <div className="carousel_wrapper">
       <div className="carousel">
-        <div className="slide one">
-          <p>projet fil rouge</p>
-          <img
-            src={Game}
-            alt="jeu de combat"
-            onClick={() =>
-              window.open(
-                "https://github.com/AnthonyLASTERNAS/jeu_de_combat",
-                "_blank"
-              )
-            }
-          />
-        </div>
-        <div className="slide two">
-          <p>Mon Git Hub</p>
-          <img
-            src={Logo}
-            alt="Git Hub"
-            onClick={() =>
-              window.open("https://github.com/AnthonyLASTERNAS", "_blank")
-            }
-          />
-        </div>
+        {slides
+          ? slides.map((slide) => (
+              <Slide
+                key={slide.id}
+                title={slide.title}
+                src={slide.src}
+                alt={slide.alt}
+                link={slide.link}
+                order={slide.order}
+              />
+            ))
+          : ""}
+
         <div className="slide three">
           <p>Mon Linkedin</p>
           <img
