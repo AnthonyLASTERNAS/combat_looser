@@ -16,3 +16,7 @@ CREATE TABLE
         role INT NOT NULL DEFAULT (0),
         created_at DATETIME NOT NULL DEFAULT NOW()
     ) ENGINE = InnoDB;
+
+INSERT INTO users (email, password) VALUES
+("toto@toto.com", "toto"),
+("tata@tata.com", "tata");
