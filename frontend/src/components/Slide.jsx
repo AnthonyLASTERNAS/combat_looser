@@ -1,4 +1,6 @@
-const Slide = ({ title, src, alt, link, order }) => {
+
+function Slide({ title, src, alt, link, order }) {
+
   return (
     <section className={`SlideComponent slide ${order}`}>
       <h1>{title}</h1>
@@ -10,6 +12,6 @@ const Slide = ({ title, src, alt, link, order }) => {
       />
     </section>
   );
-};
+}
 
 export default Slide;

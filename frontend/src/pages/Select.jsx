@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Logo from "../assets/Github_logo.jpg";
 import Game from "../assets/Battle_fight.png";
 import Linkedin from "../assets/Linkedin.png";
@@ -9,8 +11,10 @@ import Close from "../assets/close.jpg";
 import YouTube from "../assets/Youtube.png";
 import MyBadges from "../assets/mes_badges.png";
 import Slide from "../components/Slide";
+
 import { useEffect, useState } from "react";
 import axios from "axios";
+
 
 export default function Select() {
   const [slides, setSlides] = useState();

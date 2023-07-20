@@ -17,9 +17,10 @@ CREATE TABLE
         created_at DATETIME NOT NULL DEFAULT NOW()
     ) ENGINE = InnoDB;
 
-INSERT INTO users (email, password) VALUES
-("toto@toto.com", "toto"),
-("tata@tata.com", "tata");
+
+INSERT INTO
+    users (email, password)
+VALUES ("toto@toto.com", "toto"), ("tata@tata.com", "tata");
 
 
 CREATE TABLE
@@ -32,17 +33,26 @@ CREATE TABLE
         `order` VARCHAR(80)
     ) ENGINE = InnoDB;
 
-INSERT INTO slides (`title`, `src`, `alt`, `link`, `order`) VALUES
-(
-"Projet Fil Rouge",
-"/src/assets/Battle_fight.png",
-"jeu de combat",
-"https://github.com/AnthonyLASTERNAS/jeu_de_combat",
-"one"
-),
-(
-    "Mon Git Hub", 
-    "/src/assets/Github_logo.jpg", 
-    "Git Hub", 
-    "https://github.com/AnthonyLASTERNAS", 
-    "two");
+
+INSERT INTO
+    slides (
+        `title`,
+        `src`,
+        `alt`,
+        `link`,
+        `order`
+    )
+VALUES (
+        "Projet Fil Rouge",
+        "/src/assets/Battle_fight.png",
+        "jeu de combat",
+        "https://github.com/AnthonyLASTERNAS/jeu_de_combat",
+        "one"
+    ), (
+        "Mon Git Hub",
+        "/src/assets/Github_logo.jpg",
+        "Git Hub",
+        "https://github.com/AnthonyLASTERNAS",
+        "two"
+    );
+
