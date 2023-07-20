@@ -12,6 +12,10 @@ import YouTube from "../assets/Youtube.png";
 import MyBadges from "../assets/mes_badges.png";
 import Slide from "../components/Slide";
 
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+
 export default function Select() {
   const [slides, setSlides] = useState();
 

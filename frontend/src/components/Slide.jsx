@@ -1,4 +1,6 @@
+
 function Slide({ title, src, alt, link, order }) {
+
   return (
     <section className={`SlideComponent slide ${order}`}>
       <h1>{title}</h1>

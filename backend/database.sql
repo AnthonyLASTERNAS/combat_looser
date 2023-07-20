@@ -17,9 +17,11 @@ CREATE TABLE
         created_at DATETIME NOT NULL DEFAULT NOW()
     ) ENGINE = InnoDB;
 
+
 INSERT INTO
     users (email, password)
 VALUES ("toto@toto.com", "toto"), ("tata@tata.com", "tata");
+
 
 CREATE TABLE
     slides (
@@ -30,6 +32,7 @@ CREATE TABLE
         `link` VARCHAR(150),
         `order` VARCHAR(80)
     ) ENGINE = InnoDB;
+
 
 INSERT INTO
     slides (
@@ -52,3 +55,4 @@ VALUES (
         "https://github.com/AnthonyLASTERNAS",
         "two"
     );
+
