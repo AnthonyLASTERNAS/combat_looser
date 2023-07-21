@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box; /* Too much math below to be concerned with standard CSS Box Model element dimensions calculations. Let's not have to account for padding/margins/borders on anything here. */
 }
 
@@ -8,8 +10,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
-
 
 .carousel_wrapper {
   position: relative;
@@ -43,7 +43,6 @@ body {
   box-shadow: 0 0 15px 3px rgba(7, 242, 230, 0.5);
 }
 
-
 /*
 9 Slides total: 360 Degrees (full circle) --> 360/9 = 40 --> our increment for rotation
 
@@ -75,7 +74,6 @@ So, `r` is (about) 412px long! This means we need to TRANSLATE the slides in the
 }
 .slide.two {
   transform: rotateY(40deg) translateZ(412px);
-
 }
 .slide.three {
   transform: rotateY(80deg) translateZ(412px);
@@ -105,17 +103,21 @@ CSS3 ANIMATION
 Simply rotates the carousel around the Y axis by using rotateY and starting at initial value, -360º, and going to final value 0º, then resetting.
 */
 
-@keyframes swirl {   
+@keyframes swirl {
   from {
     transform: rotateY(-360deg);
   }
   to {
     transform: rotateY(0deg);
   }
-} 
+}
 
-p {
-  color:chartreuse;
+h1 {
+  color: chartreuse;
   font-size: large;
-  background-color:black;
+  background-color: black;
+  box-shadow: 0 5px 10px rgba(7, 242, 230, 0.5);
+  width: 278px;
+  margin-left: 1px;
+  margin-top: 12px;
 }

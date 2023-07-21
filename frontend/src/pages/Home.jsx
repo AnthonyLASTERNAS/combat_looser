@@ -10,7 +10,7 @@ export default function Home() {
           <span />
           <span />
           <div className="content">
-            <h2>WELCOME IN MY WORLD OF GAME</h2>
+            <h2>WELCOME IN MY PORTFOLIO</h2>
             <div className="wrap">
               <Button />
             </div>

@@ -18,6 +18,4 @@ router.get("/users/:id", usersControllers.read);
 router.get("/slides", slidesControllers.browse);
 router.get("/slides/:id", slidesControllers.read);
 
-
 module.exports = router;
-

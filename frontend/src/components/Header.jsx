@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <h1>SECRET ZONE</h1>
+      <h1>Anthony LASTERNAS</h1>
     </header>
   );
 }

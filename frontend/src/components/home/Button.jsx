@@ -4,7 +4,7 @@ function Button() {
   return (
     <button type="button" className="button">
       <Link to="/select">
-        <button>
+        <button type="button">
           <p>LETS GO</p>
         </button>
       </Link>
